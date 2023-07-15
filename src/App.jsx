@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import SideNav from "./assets/Components/SideNav";
+import SideNav from "./Components/SideNav";
 
 function App() {
   return (
