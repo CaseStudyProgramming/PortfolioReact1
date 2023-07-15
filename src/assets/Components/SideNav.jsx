@@ -4,13 +4,13 @@ import { AiOutlineHome } from "react-icons/ai";
 
 const SideNav = () => {
   const [nav, setnav] = useState(false);
-  const handlrdNav = () => {
+  const handledNav = () => {
     setnav(!nav);
   };
   return (
     <div>
       <AiOutlineMenu
-        onClick={handlrdNav}
+        onClick={handledNav}
         className="absolute top-4 right-4 z-[99] md:hidden"
       />
       {nav ? (
