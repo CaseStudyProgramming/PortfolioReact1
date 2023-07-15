@@ -1,9 +1,10 @@
 import React from "react";
+import BgGambar1 from "../Assets/unnamed.jpg";
 
 const Main = () => {
   return (
     <div id="main">
-      <img src="" alt="" srcset="" />
+      <img className="w-full h-screen" src={BgGambar1} alt="" />
     </div>
   );
 };
