@@ -46,7 +46,7 @@ const Main = () => {
             />
           </h2>
 
-          <div>
+          <div className="flex justify-between pt-6 max-w-[200px] w-full">
             <FaTwitter />
             <FaFacebookF />
             <FaInstagram />

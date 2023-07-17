@@ -2,6 +2,8 @@ import { useState } from "react";
 
 import SideNav from "./Components/SideNav";
 import Main from "./Components/Main";
+import Work from "./Components/Work";
+import Projects from "./Components/Projects";
 
 function App() {
   return (
@@ -9,6 +11,8 @@ function App() {
       <div>
         <SideNav />
         <Main />
+        <Work />
+        <Projects />
       </div>
     </>
   );
