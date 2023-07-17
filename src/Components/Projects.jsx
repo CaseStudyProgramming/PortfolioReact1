@@ -15,8 +15,16 @@ const Projects = () => {
       </p>
 
       <div className="grid sm:grid-cols-2 gap-12">
-        <ProjectsItem img={GambarProjects} title="PencarianJobs" />
-        <ProjectsItem img={GambarProjects1} title="Cuaca" />
+        <ProjectsItem
+          img={GambarProjects}
+          title="PencarianJobs"
+          bahasa="React Vite"
+        />
+        <ProjectsItem
+          img={GambarProjects1}
+          title="Cuaca"
+          bahasa="HTML,CSS,JS"
+        />
         {/* <ProjectsItem img={} title="Cuaca"/>
         <ProjectsItem img={} title="Cuaca"/> */}
       </div>
