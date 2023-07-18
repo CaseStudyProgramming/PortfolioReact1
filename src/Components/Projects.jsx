@@ -19,11 +19,13 @@ const Projects = () => {
           img={GambarProjects}
           title="PencarianJobs"
           bahasa="React Vite"
+          link="https://casestudyprogramming.github.io/PencarianJobsFE/"
         />
         <ProjectsItem
           img={GambarProjects1}
           title="Cuaca"
           bahasa="HTML,CSS,JS"
+          link="https://casestudyprogramming.github.io/Cuaca1/"
         />
         {/* <ProjectsItem img={} title="Cuaca"/>
         <ProjectsItem img={} title="Cuaca"/> */}
