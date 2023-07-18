@@ -10,11 +10,57 @@ import { BsPerson } from "react-icons/bs";
 
 const SideNav = () => {
   const [nav, setnav] = useState(false);
+  const [isHomeHover, setIsHomeHover] = useState(false);
+  const [isJobsHover, setIsJobsHover] = useState(false);
+  const [isProjectsHover, setIsProjectsHover] = useState(false);
+  const [isSayaHover, setIsSayaHover] = useState(false);
+  const [isContactHover, setIsContactHover] = useState(false);
   const handledNav = () => {
     setnav(!nav);
 
     document.body.classList.toggle("overflow-hidden");
   };
+
+  const handleHomeMouseEnter = () => {
+    setIsHomeHover(true);
+  };
+
+  const handleHomeMouseLeave = () => {
+    setIsHomeHover(false);
+  };
+
+  const handleJobsMouseEnter = () => {
+    setIsJobsHover(true);
+  };
+
+  const handleJobsMouseLeave = () => {
+    setIsJobsHover(false);
+  };
+
+  const handleProjectsMouseEnter = () => {
+    setIsProjectsHover(true);
+  };
+
+  const handleProjectsMouseLeave = () => {
+    setIsProjectsHover(false);
+  };
+
+  const handleSayaMouseEnter = () => {
+    setIsSayaHover(true);
+  };
+
+  const handleSayaMouseLeave = () => {
+    setIsSayaHover(false);
+  };
+
+  const handleContactMouseEnter = () => {
+    setIsContactHover(true);
+  };
+
+  const handleContactMouseLeave = () => {
+    setIsContactHover(false);
+  };
+
   return (
     <div>
       <AiOutlineMenu
@@ -70,36 +116,65 @@ const SideNav = () => {
 
       <div className="md:block hidden fixed top-[25%] z-10">
         <div className="flex flex-col">
-          <a
-            href="#main"
-            className="rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200"
-          >
-            <AiOutlineHome size={20} />
-          </a>
-          <a
-            href="#work"
-            className="rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200"
-          >
-            <GrProjects size={20} />
-          </a>
-          <a
-            href="#projects"
-            className="rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200"
-          >
-            <AiOutlineProject size={20} />
-          </a>
-          <a
-            href="#main"
-            className="rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200"
-          >
-            <BsPerson size={20} />
-          </a>
-          <a
-            href="#contact"
-            className="rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200"
-          >
-            <AiOutlineMail size={20} />
-          </a>
+          <div className="flex items-center">
+            <a
+              href="#main"
+              className="rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200 flex items-center"
+              onMouseEnter={handleHomeMouseEnter}
+              onMouseLeave={handleHomeMouseLeave}
+            >
+              <AiOutlineHome size={20} />
+            </a>
+            {isHomeHover && <span className="ml-2">Home</span>}
+          </div>
+
+          <div className="flex items-center">
+            <a
+              href="#work"
+              className="rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200"
+              onMouseEnter={handleJobsMouseEnter}
+              onMouseLeave={handleJobsMouseLeave}
+            >
+              <GrProjects size={20} />
+            </a>
+            {isJobsHover && <span className="ml-2">Jobs</span>}
+          </div>
+
+          <div className="flex items-center">
+            <a
+              href="#projects"
+              className="rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200"
+              onMouseEnter={handleProjectsMouseEnter}
+              onMouseLeave={handleProjectsMouseLeave}
+            >
+              <AiOutlineProject size={20} />
+            </a>
+            {isProjectsHover && <span className="ml-2">Projects</span>}
+          </div>
+
+          <div className="flex items-center">
+            <a
+              href="#main"
+              className="rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200"
+              onMouseEnter={handleSayaMouseEnter}
+              onMouseLeave={handleSayaMouseLeave}
+            >
+              <BsPerson size={20} />
+            </a>
+            {isSayaHover && <span className="ml-2">Saya</span>}
+          </div>
+
+          <div className="flex items-center">
+            <a
+              href="#contact"
+              className="rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200"
+              onMouseEnter={handleContactMouseEnter}
+              onMouseLeave={handleContactMouseLeave}
+            >
+              <AiOutlineMail size={20} />
+            </a>
+            {isContactHover && <span className="ml-2">Contact</span>}
+          </div>
         </div>
       </div>
     </div>
