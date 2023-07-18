@@ -12,12 +12,14 @@ const SideNav = () => {
   const [nav, setnav] = useState(false);
   const handledNav = () => {
     setnav(!nav);
+
+    document.body.classList.toggle("overflow-hidden");
   };
   return (
     <div>
       <AiOutlineMenu
         onClick={handledNav}
-        className="absolute top-4 right-4 z-[99] md:hidden"
+        className="fixed top-4 right-4 z-[99] md:hidden"
       />
       {nav ? (
         <div className="fixed w-full h-screen bg-white/90 flex flex-col justify-center items-center z-20">

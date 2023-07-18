@@ -5,3 +5,7 @@
 *{
     scroll-behavior: smooth;
 }
+
+.overflow-hidden {
+    overflow: hidden;
+  }

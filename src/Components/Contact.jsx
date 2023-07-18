@@ -21,8 +21,16 @@ const Contact = () => {
               name="Nama"
               className=" border-2 rounded-lg p-3 flex border-gray-300"
               required
+              autoComplete="off"
+              onInvalid={(e) =>
+                e.target.setCustomValidity("Tolong isi bagian nama")
+              }
+              onInput={(e) => e.target.setCustomValidity("")}
+              title=""
             />
           </div>
+
+          {/*Nomor HP*/}
           <div className="flex flex-col">
             <label htmlFor="" className=" uppercase text-sm py-2">
               Nomor HP
@@ -30,11 +38,23 @@ const Contact = () => {
             <input
               type="text"
               name="NomorHP"
-              className=" border-2 rounded-lg p-3 flex border-gray-300"
+              className=" border-2 rounded-lg p-3 flex border-gray-300 "
               required
+              autoComplete="off"
+              // title="Isi nomor telepon anda dengan benar (minimal 11 digit dan maksimal 13 digit)"
+              pattern="[0-9]{11,13}"
+              onInvalid={(e) =>
+                e.target.setCustomValidity(
+                  "Tolong isi bagian nomor hp yang sesuai"
+                )
+              }
+              onInput={(e) => e.target.setCustomValidity("")}
+              title=""
             />
           </div>
         </div>
+
+        {/*EMAIL*/}
 
         <div className="flex flex-col py-2">
           <label htmlFor="" className=" uppercase text-sm py-2">
@@ -45,6 +65,15 @@ const Contact = () => {
             name="Email"
             className=" border-2 rounded-lg p-3 flex border-gray-300"
             required
+            autoComplete="off"
+            pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+            onInvalid={(e) =>
+              e.target.setCustomValidity(
+                "Tolong isi bagian email dengan benar (contoh: nama@example.com)"
+              )
+            }
+            onInput={(e) => e.target.setCustomValidity("")}
+            title=""
           />
         </div>
         <div className="flex flex-col py-2">
@@ -56,6 +85,12 @@ const Contact = () => {
             name="Subjek"
             className=" border-2 rounded-lg p-3 flex border-gray-300"
             required
+            autoComplete="off"
+            onInvalid={(e) =>
+              e.target.setCustomValidity("Tolong isi bagian subjek")
+            }
+            onInput={(e) => e.target.setCustomValidity("")}
+            title=""
           />
         </div>
         <div className="flex flex-col py-2">
@@ -68,10 +103,16 @@ const Contact = () => {
             rows="10"
             className=" border-2 rounded-lg p-3 flex border-gray-300"
             required
+            autoComplete="off"
+            onInvalid={(e) =>
+              e.target.setCustomValidity("Tolong isi bagian pesan")
+            }
+            onInput={(e) => e.target.setCustomValidity("")}
+            title=""
           ></textarea>
         </div>
 
-        <button className=" bg-[#1ef12c] text-gray-100 mt-4 w-full rounded-lg p-4">
+        <button className=" bg-[#1ef12c] text-gray-100 mt-4 w-full font-bold rounded-lg p-4 hover:bg-green-800 hover:text-white tracking-[1px]">
           Kirim
         </button>
       </form>

@@ -2,6 +2,7 @@ import React from "react";
 import ProjectsItem from "./ProjectsItem";
 import GambarProjects from "../Assets/PencarianJobs.png";
 import GambarProjects1 from "../Assets/Cuaca.png";
+import GambarProjects2 from "../Assets/HappyNewYear.png";
 
 const Projects = () => {
   return (
@@ -26,6 +27,12 @@ const Projects = () => {
           title="Cuaca"
           bahasa="HTML,CSS,JS"
           link="https://casestudyprogramming.github.io/Cuaca1/"
+        />
+        <ProjectsItem
+          img={GambarProjects2}
+          title="Happy New Year"
+          bahasa="HTML,CSS,JS"
+          link="https://casestudyprogramming.github.io/NewYear2nd2023/"
         />
         {/* <ProjectsItem img={} title="Cuaca"/>
         <ProjectsItem img={} title="Cuaca"/> */}
