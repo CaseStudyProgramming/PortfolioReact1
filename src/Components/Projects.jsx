@@ -2,7 +2,7 @@ import React from "react";
 import ProjectsItem from "./ProjectsItem";
 import GambarProjects from "../Assets/PencarianJobs.png";
 import GambarProjects1 from "../Assets/Cuaca.png";
-import GambarProjects2 from "../Assets/HappyNewYear.png";
+import GambarProjects2 from "../Assets/hapinewyer.png";
 
 const Projects = () => {
   return (

@@ -22,17 +22,19 @@ const Main = () => {
             Halo saya David Cristian P.S.
           </h1>
           <h2 className="flex sm:text-3xl text-2xl pt-4 text-gray-800">
-            aku
+            Saya
             <TypeAnimation
               sequence={[
                 // Same substring at the start will only be typed out once, initially
-                "Developer",
+                "Belajar ReactJS",
                 1000, // wait 1s before replacing "Mice" with "Hamsters"
-                "Coder",
+                "Belajar NextJS",
                 2000,
-                "Enjoyer",
+                "Belajar MERN",
                 2000,
-                "Gamer",
+                "Belajar Docker",
+                2000,
+                "Belajar MySQL && NoSQL",
                 2000,
               ]}
               wrapper="div"
@@ -47,10 +49,10 @@ const Main = () => {
           </h2>
 
           <div className="flex justify-between pt-6 max-w-[200px] w-full cursor-pointer">
-            <FaTwitter />
-            <FaFacebookF />
-            <FaInstagram />
-            <FaLinkedinIn />
+            <FaTwitter className="hover:scale-110 ease-in duration-200" />
+            <FaFacebookF className="hover:scale-110 ease-in duration-200" />
+            <FaInstagram className="hover:scale-110 ease-in duration-200" />
+            <FaLinkedinIn className="hover:scale-110 ease-in duration-200" />
           </div>
         </div>
       </div>
